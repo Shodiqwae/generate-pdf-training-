@@ -6,7 +6,7 @@ import * as path from 'path';
 export class PdfController {
   @Get('download')
   downloadPdf(@Res() res: Response): void {
-    const filePath = path.join(__dirname, '..', 'assets/JYPL (SG) Action Guide - Mabel Goh.pdf'); // Menentukan jalur file PDF
+    const filePath = path.join(__dirname, '..', 'assets/JYPL (SG) Action Guide - Mabel Goh.pdf'); 
 
     res.download(filePath, 'assets/JYPL (SG) Action Guide - Mabel Goh.pdf', (err) => {
       if (err) {
